@@ -250,9 +250,9 @@ const reply = (teks) => {
         let gclink = (`https://chat.whatsapp.com/`+await GojoMdNx.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
         let isgclink = isLinkThisGc.test(m.text)
-        if (isgclink) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Sent This Group Link❤️`)
-        if (isAdmins) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Are An Admin Of The Group❤️`)
-        if (isCreator) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Are My Owner Hahahahah🤣😘, You Think I Will Betray You Huh🐦`)
+        if (isgclink) return reply(`ارسال رابط = انذار . ما بقولك شي الحين بس عشان ارسلت رابط هاذ القروب`)
+        if (isAdmins) return reply(`ارسال رابط = انذار  . ما بقول لك شي الحين بس عشان انت مشرف`)
+        if (isCreator) return reply(`ارسال رابط = انذار . ما بقول لك شي الحين عشان انت مالك جيرايا عمي بس  تذكر غوجو عمك🙂🔪`)
         GojoMdNx.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         }
@@ -1168,7 +1168,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             let orang = member[Math.floor(Math.random() * member.length)]
             let jodoh = member[Math.floor(Math.random() * member.length)]
             let jawab = `@${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
-	    「 معلش زوجناكم لأنكم تصلحون لبعض 🤡 」◣
+	    「 لقد خلقتما لبعضكما 🤡 」◣
 	    「 الي يشوفهم مناسبين لبعض زيي يضغط يب 🤡 」◣`
             let menst = [orang, jodoh]
             let buttons = [
@@ -1799,7 +1799,7 @@ break
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 غوجو ساتورو موجود 🎉」\n\n${text}`
+                      let txt = `「 بوت جيرايا موجود 🎉」\n\n${text}`
                       GojoMdNx.send5ButImg(yoi, txt, GojoMdNx.user.name, global.thumb, btn)
 		}
 		reply('「 تم 🤗 」◣')
@@ -3384,11 +3384,11 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedFooterText: `┌─❖
 ┌─❖ مـرحبـاً 🤗 」
 └┬❖ 「 ${pushname} 」
-││✑「مـعـك بـوت غـوجـو 👋🏻」◣
-││✑「مـن مـمـلـكـة غولد 🤗」◣
+││✑「مـعـك بـوت جيرايا 👋🏻」◣
+││✑「مـن مـمـلـكـة سـبارتا 🤗」◣
 │└───────────────┈ ⳹
  「 مـعـلـومـات عـن الـبـوت 」
-│✙「 اسـم الـبـوت 」◣ : 「 غوجو ✨🤞🏻 」◣
+│✙「 اسـم الـبـوت 」◣ : 「 سينسي ✨🤞🏻 」◣
 │✙「 رقـم الـمـالـك 」◣ : ${global.owner}
 │✙「عـدد الـمـسـتـخـدمـيـن」◣ : ${Object.keys(global.db.data.users).length}
 └┬──────────────┈ ⳹
@@ -3439,8 +3439,8 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedFooterText: `
 ┌─❖ مـرحبـاً 🤗 」
 └┬❖ 「 ${pushname} 」
-││✑「مـعـك بـوت غـوجـو 👋🏻」◣
-││✑「مـن مـمـلـكـة غولد 🤗」◣
+││✑「مـعـك بـوت جيرايا 👋🏻」◣
+││✑「مـن مـمـلـكـة سبارتا 🤗」◣
 │└───────────────┈ ⳹
  「 مـعـلـومـات عـن الـبـوت 」
 │✙「 اسـم الـبـوت 」◣ : 「 غوجو ✨🤞🏻 」◣
@@ -3588,26 +3588,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										}
 								]
 							},
-							{
-								"title": "المملكة",
-								"rows": [
-									{
-										"title": "قائمة استمارات مملكة غولد",
-										"description": ".17.",
-										"rowId": `${prefix}anon`
-									}
-								]
-							},
-							{
-								"title": "نبذة",
-								"rows": [
-									{
-										"title": "تاريخ مملكة غولد",
-										"description": ".18.",
-										"rowId": `${prefix}tqtt`
-									}
-								]
-							}
+							
 						],
           listType: 1
                 }
@@ -3618,14 +3599,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
     case 'donasi': case 'donate': case 'sewabot': case 'sewa': {
                 GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c15f725add0381fb69c4b.jpg' }, caption: `` }, { quoted: m })
             }
-            break
-            case 'التسجhgjيل': case 'التسجيل': {
-                reply(`「 الفرع الخاص ل التعليم على البوت 」◣
-
-「 _https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3_ 」◣
-
-「 نرحب بالجميع. 」◣`)
-            }
+            
             break
 case '9807786789678': {
   	anu = `
